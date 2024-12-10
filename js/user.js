@@ -104,11 +104,6 @@ AddUserBtn02.addEventListener("click", () => {
       });
     });
 
-
-
-
-
-
     document.getElementById("ID").value = "";
     document.getElementById("FristName").value = "";
     document.getElementById("LastName").value = "";
@@ -116,5 +111,13 @@ AddUserBtn02.addEventListener("click", () => {
     document.getElementById("phone").value = "";
   } else {
     alert("Please fill in all fields!");
+  }
+});
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    blure.classList.add("remove");
+    blure.classList.remove("blur");
+    AddUser.classList.add("remove");
+    WarningMassege.classList.add("remove");
   }
 });
